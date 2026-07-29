@@ -1,65 +1,23 @@
-# PowerChain Programmable Asset Token Standard (PTS-001-ALPHA)
+# PTS-001 Documentation
 
-# Documentation Portal
+**PowerChain Programmable Asset Token Standard (PTS-001)**
 
-**Document:** `/docs/README.md`
 **Version:** 1.0.0 Alpha
 **Status:** Experimental Alpha Release
 **Organization:** PowerChain Standards Organization (PSO)
-**Protocol Suite:** PPS-001 PowerChain Protocol Suite
 
 ---
 
 # Welcome
 
-Welcome to the official documentation portal for the **PowerChain Programmable Asset Token Standard (PTS-001-ALPHA)**.
+Welcome to the official documentation for the **PowerChain Programmable Asset Token Standard (PTS-001)**.
 
-PTS-001-ALPHA defines an open programmable asset framework for creating, managing, verifying, transferring, and interoperating digital assets across blockchain networks, physical infrastructure systems, and enterprise environments.
+This documentation provides technical guidance for developers, architects, implementers, validators, and contributors working with the PTS-001 ecosystem.
 
-This documentation provides technical references for:
-
-* protocol developers
-* blockchain engineers
-* SDK developers
-* infrastructure operators
-* energy technology providers
-* IoT manufacturers
-* enterprise integrators
-* standards contributors
-
----
-
-# Important Project Notice
-
-PTS-001-ALPHA is an experimental development project.
-
-The documentation, specifications, examples, and reference implementations are provided for:
-
-* research
-* development
-* testing
-* interoperability exploration
-
-PTS-001-ALPHA has not completed:
-
-* independent security audits
-* formal certification
-* production validation
-* regulatory approval
-* standards body adoption
-
-Production deployment requires independent technical, security, and compliance review.
-
-See:
+The documentation complements the normative specification located in:
 
 ```text
-/docs/DISCLAIMER.md
-```
-
-or:
-
-```text
-/DISCLAIMER.md
+/specification/PTS-001-alpha.md
 ```
 
 ---
@@ -70,509 +28,266 @@ or:
 docs/
 
 ├── README.md
-
+├── INDEX.md
 ├── GETTING_STARTED.md
-
-├── ARCHITECTURE.md
-
-├── PROTOCOL_OVERVIEW.md
-
-├── TOKEN_MODEL.md
-
-├── LIFECYCLE_MODEL.md
-
-├── NETWORK_PROFILES.md
-
+├── QUICKSTART.md
+├── FAQ.md
+├── GLOSSARY.md
+├── TERMINOLOGY.md
+├── ROADMAP.md
+├── PROJECT_STATUS.md
+├── RELEASE_NOTES.md
 │
-├── solana/
-
-│   ├── TOKEN_2022_PROFILE.md
-
-│   └── IMPLEMENTATION_GUIDE.md
-
+├── architecture/
+│   ├── OVERVIEW.md
+│   ├── SYSTEM_ARCHITECTURE.md
+│   ├── COMPONENTS.md
+│   ├── LAYER_MODEL.md
+│   ├── DATA_FLOW.md
+│   ├── TRUST_MODEL.md
+│   └── DEPLOYMENT.md
 │
-├── sui/
-
-│   ├── MOVE_PACKAGE_PROFILE.md
-
-│   └── IMPLEMENTATION_GUIDE.md
-
+├── specification/
+│   ├── OVERVIEW.md
+│   ├── TOKEN_MODEL.md
+│   ├── ASSET_MODEL.md
+│   ├── STATE_MACHINE.md
+│   ├── METADATA.md
+│   ├── REGISTRY.md
+│   ├── EVENTS.md
+│   └── VERSIONING.md
 │
-├── layer2/
-
+├── protocols/
+│   ├── POWERCHAIN.md
+│   ├── SOLANA_TOKEN2022.md
+│   ├── SUI_MOVE.md
+│   ├── LAYER2.md
+│   ├── CROSS_CHAIN.md
 │   ├── BRIDGE_PROTOCOL.md
-
-│   ├── SECURITY_MODEL.md
-
-│   └── MESSAGE_FORMATS.md
-
-│
-├── energy/
-
-│   ├── ENERGY_CERTIFICATE_PROFILE.md
-
-│   └── MARKETPLACE_PROFILE.md
-
-│
-├── hardware/
-
-│   ├── DEVICE_IDENTITY_PROFILE.md
-
-│   └── ATTESTATION_MODEL.md
-
+│   └── INTEROPERABILITY.md
 │
 ├── api/
-
-│   ├── OPENAPI_GUIDE.md
-
-│   └── API_REFERENCE.md
-
+│   ├── API_OVERVIEW.md
+│   ├── REST_API.md
+│   ├── OPENAPI.md
+│   ├── AUTHENTICATION.md
+│   ├── EXAMPLES.md
+│   └── ERROR_REFERENCE.md
 │
 ├── protobuf/
-
-│   └── PROTOBUF_GUIDE.md
-
+│   ├── OVERVIEW.md
+│   ├── MESSAGE_TYPES.md
+│   ├── VERSIONING.md
+│   └── EXAMPLES.md
 │
-├── conformance/
-
-│   ├── TESTING_MODEL.md
-
-│   ├── TEST_VECTOR_FORMAT.md
-
-│   └── CERTIFICATION_PROCESS.md
-
+├── schemas/
+│   ├── JSON_SCHEMA.md
+│   ├── VALIDATION.md
+│   └── EXAMPLES.md
+│
+├── sdk/
+│   ├── OVERVIEW.md
+│   ├── TYPESCRIPT.md
+│   ├── RUST.md
+│   ├── GO.md
+│   ├── PYTHON.md
+│   ├── JAVA.md
+│   ├── KOTLIN.md
+│   └── SWIFT.md
+│
+├── implementation/
+│   ├── REFERENCE_IMPLEMENTATION.md
+│   ├── NODE.md
+│   ├── VALIDATOR.md
+│   ├── WALLET.md
+│   ├── REGISTRY.md
+│   └── DEPLOYMENT.md
+│
+├── security/
+│   ├── SECURITY_OVERVIEW.md
+│   ├── THREAT_MODEL.md
+│   ├── CRYPTOGRAPHY.md
+│   ├── KEY_MANAGEMENT.md
+│   ├── BEST_PRACTICES.md
+│   ├── INCIDENT_RESPONSE.md
+│   └── RESPONSIBLE_DISCLOSURE.md
 │
 ├── governance/
-
 │   ├── GOVERNANCE_MODEL.md
-
+│   ├── WORKING_GROUPS.md
+│   ├── PIP_PROCESS.md
 │   ├── CHANGE_PROCESS.md
-
-│   └── PIP_PROCESS.md
-
+│   ├── VERSION_POLICY.md
+│   └── RELEASE_PROCESS.md
 │
-└── security/
-
-    ├── SECURITY_ARCHITECTURE.md
-
-    ├── THREAT_MODEL.md
-
-    └── RESPONSIBLE_DISCLOSURE.md
+├── conformance/
+│   ├── TESTING.md
+│   ├── TEST_VECTORS.md
+│   ├── VALIDATION.md
+│   ├── CERTIFICATION.md
+│   └── IMPLEMENTATION_LEVELS.md
+│
+├── profiles/
+│   ├── ENERGY.md
+│   ├── HARDWARE.md
+│   ├── DIGITAL_IDENTITY.md
+│   ├── ENTERPRISE.md
+│   ├── GOVERNMENT.md
+│   └── SUPPLY_CHAIN.md
+│
+├── tutorials/
+│   ├── CREATE_ASSET.md
+│   ├── REGISTER_ASSET.md
+│   ├── TRANSFER_ASSET.md
+│   ├── VERIFY_ASSET.md
+│   ├── BUILD_WALLET.md
+│   └── BUILD_NODE.md
+│
+├── examples/
+│   ├── JSON.md
+│   ├── API.md
+│   ├── SOLANA.md
+│   ├── SUI.md
+│   ├── LAYER2.md
+│   └── SDK.md
+│
+├── developer/
+│   ├── CONTRIBUTING.md
+│   ├── CODING_STANDARDS.md
+│   ├── STYLE_GUIDE.md
+│   ├── DIRECTORY_LAYOUT.md
+│   └── CI_CD.md
+│
+└── appendix/
+    ├── REFERENCES.md
+    ├── RFC_MAPPING.md
+    ├── ISO_MAPPING.md
+    ├── LICENSES.md
+    ├── ABBREVIATIONS.md
+    └── ACKNOWLEDGEMENTS.md
 ```
 
 ---
 
-# Core Documentation
+# Quick Start
+
+If you are new to PTS-001, read the documentation in this order:
+
+1. `GETTING_STARTED.md`
+2. `QUICKSTART.md`
+3. `architecture/OVERVIEW.md`
+4. `specification/OVERVIEW.md`
+5. `/specification/PTS-001-alpha.md`
+
+---
+
+# Documentation Categories
 
 ## Architecture
 
-Defines the overall system design:
+Describes the overall protocol design, components, trust model, deployment patterns, and data flow.
 
-* protocol layers
-* network relationships
-* interoperability model
-* infrastructure components
+## Specification
 
-Document:
+Explains the core asset model, metadata, registries, state machine, events, and protocol behavior.
 
-```text
-ARCHITECTURE.md
+## Protocols
+
+Documents blockchain-specific implementation profiles including PowerChain, Solana Token-2022, Sui Move, Layer-2, and interoperability.
+
+## API
+
+Provides REST API documentation, authentication guidance, OpenAPI definitions, and usage examples.
+
+## SDK
+
+Language-specific developer guides for implementing PTS-001 clients and applications.
+
+## Security
+
+Covers cryptographic requirements, threat modeling, key management, secure deployment, and responsible vulnerability disclosure.
+
+## Governance
+
+Defines the standards governance process, proposal workflow, versioning policy, and release management.
+
+## Conformance
+
+Describes validation, testing, certification, and implementation levels.
+
+## Profiles
+
+Documents industry-specific extensions such as Energy, Hardware Identity, Enterprise, Government, and Supply Chain.
+
+## Tutorials
+
+Step-by-step guides for common development and integration tasks.
+
+---
+
+# Documentation Standards
+
+Every documentation file should include the following metadata:
+
+```yaml
+Document-ID:
+Title:
+Version: 1.0.0 Alpha
+Status: Experimental Alpha Release
+Category: Normative | Informative | Reference
+Owner: PowerChain Standards Organization
+Last Updated:
 ```
 
 ---
 
-## Protocol Overview
+# Project Status
 
-Explains:
+The documentation corresponds to **PTS-001 Version 1.0.0 Alpha**.
 
-* asset model
-* token behavior
-* registries
-* lifecycle states
-* interoperability concepts
+Current maturity:
 
-Document:
-
-```text
-PROTOCOL_OVERVIEW.md
-```
+* Core specification under active development
+* Experimental network profiles
+* Initial documentation and examples
+* Planned reference implementations and SDKs
+* Planned conformance and certification program
 
 ---
 
-## Token Model
+# Contributing
 
-Defines:
+Documentation improvements are welcome.
 
-* programmable asset structure
-* metadata requirements
-* ownership rules
-* state transitions
+Please read:
 
-Document:
+* `/CONTRIBUTING.md`
+* `/SECURITY.md`
+* `developer/CONTRIBUTING.md`
 
-```text
-TOKEN_MODEL.md
-```
+before submitting pull requests.
 
 ---
 
-## Lifecycle Model
+# Disclaimer
 
-Defines:
+PTS-001 is an experimental specification.
 
-```text
-CREATE
+Documentation, APIs, schemas, and examples may change before the Beta release.
 
- |
+This project has not yet completed independent security audits or production certification.
 
-REGISTER
-
- |
-
-ACTIVATE
-
- |
-
-TRANSFER
-
- |
-
-VERIFY
-
- |
-
-RETIRE
-```
-
-Document:
-
-```text
-LIFECYCLE_MODEL.md
-```
+See `/DISCLAIMER.md` for full details.
 
 ---
 
-# Network Documentation
+# License
 
-## Solana Token-2022
-
-Profile:
-
-```text
-PTS-SOL-001-ALPHA
-```
-
-Documentation:
-
-```text
-solana/TOKEN_2022_PROFILE.md
-```
-
-Covers:
-
-* Token-2022 compatibility
-* metadata mapping
-* transfer rules
-* event synchronization
-
----
-
-## Sui Move
-
-Profile:
-
-```text
-PTS-SUI-001-ALPHA
-```
-
-Documentation:
-
-```text
-sui/MOVE_PACKAGE_PROFILE.md
-```
-
-Covers:
-
-* Move objects
-* ownership capabilities
-* package architecture
-* event models
-
----
-
-## Layer-2 Networks
-
-Profile:
-
-```text
-PXS-L2-001-ALPHA
-```
-
-Documentation:
-
-```text
-layer2/BRIDGE_PROTOCOL.md
-```
-
-Covers:
-
-* messaging
-* proofs
-* settlement
-* bridge security
-
----
-
-# Industry Profiles
-
-## Energy Assets
-
-Profile:
-
-```text
-PES-001-ALPHA
-```
-
-Documentation:
-
-```text
-energy/ENERGY_CERTIFICATE_PROFILE.md
-```
-
-Supports:
-
-* renewable certificates
-* generation proofs
-* storage credits
-* environmental assets
-
----
-
-## Hardware Identity
-
-Profile:
-
-```text
-PHS-001-ALPHA
-```
-
-Documentation:
-
-```text
-hardware/DEVICE_IDENTITY_PROFILE.md
-```
-
-Supports:
-
-* device registration
-* hardware identity
-* attestation
-* secure infrastructure
-
----
-
-# Developer Resources
-
-## Getting Started
-
-New developers should begin with:
-
-```text
-GETTING_STARTED.md
-```
-
-Includes:
-
-* environment setup
-* repository installation
-* building
-* testing
-* first implementation
-
----
-
-## API Documentation
-
-Location:
-
-```text
-api/
-```
-
-Includes:
-
-* REST APIs
-* OpenAPI definitions
-* integration examples
-
----
-
-## Protocol Buffers
-
-Location:
-
-```text
-protobuf/
-```
-
-Includes:
-
-* asset messages
-* identity messages
-* registry schemas
-* bridge messages
-
----
-
-# Testing and Conformance
-
-Documentation:
-
-```text
-conformance/
-```
-
-Includes:
-
-* test requirements
-* validation procedures
-* test vector formats
-* certification preparation
-
----
-
-# Security Documentation
-
-Location:
-
-```text
-security/
-```
-
-Includes:
-
-* security architecture
-* threat model
-* responsible disclosure process
-
----
-
-# Governance Documentation
-
-Location:
-
-```text
-governance/
-```
-
-Defines:
-
-* proposal process
-* working groups
-* standards lifecycle
-* change management
-
----
-
-# Document Classification
-
-PTS-001 documentation uses:
-
-| Class        | Description                |
-| ------------ | -------------------------- |
-| Normative    | Required protocol behavior |
-| Informative  | Guidance and explanation   |
-| Experimental | Alpha research material    |
-| Reference    | Implementation examples    |
-
----
-
-# Documentation Lifecycle
-
-```text
-Draft
-
- |
-
-Alpha Review
-
- |
-
-Community Review
-
- |
-
-Implementation Testing
-
- |
-
-Beta Release
-
- |
-
-Final Standard
-```
-
----
-
-# Contribution
-
-Documentation contributions should include:
-
-* clear technical explanations
-* updated examples
-* implementation notes
-* test information
-* security considerations
-
-Follow:
-
-```text
-/CONTRIBUTING.md
-```
-
----
-
-# Quick Links
-
-| Resource      | Location                          |
-| ------------- | --------------------------------- |
-| Main README   | `/README.md`                      |
-| Specification | `/specification/PTS-001-alpha.md` |
-| Disclaimer    | `/DISCLAIMER.md`                  |
-| Instructions  | `/INSTRUCTIONS.md`                |
-| Security      | `/SECURITY.md`                    |
-| License       | `/LICENSE`                        |
-| Changelog     | `/CHANGELOG.md`                   |
-
----
-
-# Final Documentation Status
-
-```text
-Project:
-
-PTS-001-ALPHA
-
-Version:
-
-1.0.0 Alpha
-
-Documentation Status:
-
-Experimental Alpha Documentation
-
-Production Certification:
-
-Not Completed
-
-Security Audit:
-
-Not Completed
-```
+Unless otherwise specified, documentation is distributed under the same license as the repository. Refer to the `LICENSE` file for complete terms.
 
 ---
 
 **PowerChain Standards Organization (PSO)**
-**PTS-001-ALPHA Documentation Portal**
-**Version 1.0.0 Alpha**
+**PowerChain Programmable Asset Token Standard (PTS-001)**
+**Version 1.0.0 Alpha — Experimental Alpha Release**
+
