@@ -1,243 +1,232 @@
-# PTS-001 Specification
+# PowerChain Programmable Asset Token Standard (PTS-001)
 
-**PowerChain Programmable Asset Token Standard (PTS-001)**
-
-**Version:** 1.0.0 Alpha
-**Status:** Experimental Alpha Release
-**Document Class:** Normative Specification
-**Organization:** PowerChain Standards Organization (PSO)
+> **Version:** 1.0.0 Alpha
+> **Status:** Experimental Alpha Release
+> **Organization:** PowerChain Standards Organization (PSO)
+> **License:** MIT
 
 ---
 
 # Overview
 
-The **PowerChain Programmable Asset Token Standard (PTS-001)** defines an open, vendor-neutral framework for programmable digital assets, interoperable blockchain networks, and enterprise-grade tokenized infrastructure.
+The **PowerChain Programmable Asset Token Standard (PTS-001)** is an open, vendor-neutral specification for programmable digital assets, blockchain interoperability, and enterprise-grade tokenized infrastructure.
 
-The specification establishes a common architecture for representing, issuing, transferring, managing, and validating programmable assets across multiple blockchain ecosystems while maintaining interoperability, extensibility, and long-term compatibility.
+PTS-001 establishes a common framework for creating, issuing, managing, transferring, verifying, and governing programmable assets across multiple blockchain ecosystems while maintaining interoperability, extensibility, and long-term compatibility.
 
-PTS-001 is intended for blockchain developers, protocol architects, enterprises, governments, financial institutions, infrastructure providers, and standards organizations.
+The standard combines normative protocol specifications with implementation guidance, reference APIs, JSON Schemas, Protocol Buffers, SDKs, conformance testing, and certification requirements.
 
 ---
 
-# Specification Objectives
+# Vision
 
-PTS-001 provides standardized definitions for:
+PTS-001 aims to become a comprehensive open standard for programmable assets by providing:
 
-* Programmable Digital Assets
-* Asset Identity
-* Asset Metadata
-* Registry Framework
-* Asset Lifecycle
-* State Machine
-* Token Operations
-* Event Model
-* Cryptographic Requirements
-* Security Controls
-* Interoperability
-* SDK Architecture
-* OpenAPI Interfaces
-* Protocol Buffers
+* A standardized digital asset model
+* Cross-chain interoperability
+* Enterprise-grade security
+* Extensible metadata and identity frameworks
+* Official SDKs and APIs
+* Conformance testing
+* Certification requirements
+* Open governance and community participation
+
+---
+
+# Key Features
+
+* Vendor-neutral specification
+* Multi-network compatibility
+* Programmable asset lifecycle
+* Asset identity framework
+* Metadata framework
+* Registry architecture
+* Event model
+* Security and cryptographic requirements
+* OpenAPI specifications
+* Protocol Buffer definitions
 * JSON Schemas
-* Conformance Testing
-* Certification Requirements
+* Official SDK ecosystem
+* Reference implementations
+* Conformance and certification framework
 
 ---
 
-# Current Release
+# Repository Structure
 
-| Property         | Value                      |
-| ---------------- | -------------------------- |
-| Specification    | PTS-001                    |
-| Version          | 1.0.0 Alpha                |
-| Status           | Experimental Alpha Release |
-| Compatibility    | Subject to Change          |
-| Production Ready | No                         |
+```text
+PTS-001/
+
+├── docs/
+├── specification/
+├── sdk/
+├── openapi/
+├── protobuf/
+├── schemas/
+├── registries/
+├── reference-implementation/
+├── examples/
+├── scripts/
+├── test-vectors/
+├── certification/
+├── runtime/
+├── platform/
+├── tools/
+│
+├── README.md
+├── DISCLAIMER.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── CHANGELOG.md
+├── LICENSE
+└── package.json
+```
 
 ---
 
-# Specification Layout
+# Specification
+
+The normative specification is located in:
 
 ```text
 specification/
-
-README.md
-PTS-001-alpha.md
-
-appendices/
-architecture/
-asset-model/
-certification/
-conformance/
-events/
-governance/
-identity/
-interoperability/
-lifecycle/
-metadata/
-network-profiles/
-openapi/
-protobuf/
-registries/
-schemas/
-sdk/
-security/
-state-machine/
-token-operations/
-versioning/
+└── PTS-001-alpha.md
 ```
 
----
-
-# Core Specification
-
-The primary specification is:
-
-```text
-PTS-001-alpha.md
-```
-
-This document defines all normative protocol requirements.
-
----
-
-# Specification Contents
-
-The core specification includes:
+The specification is organized into twenty major sections covering:
 
 1. Introduction
 2. Scope
 3. Normative References
-4. Terms and Definitions
-5. Design Principles
-6. System Architecture
-7. Asset Model
-8. Identity Model
-9. Metadata Model
-10. Registry Framework
-11. Lifecycle Model
-12. State Machine
-13. Token Operations
-14. Event Framework
-15. Cryptographic Requirements
-16. Network Protocols
-17. API Framework
-18. SDK Framework
-19. JSON Schemas
-20. Protocol Buffers
-21. Interoperability
-22. Network Profiles
-23. Security
-24. Privacy
-25. Governance
-26. Conformance
-27. Certification
-28. Versioning
-29. Extension Framework
-30. Implementation Guidance
-31. Appendices
+4. Definitions
+5. Architecture
+6. Asset Model
+7. Identity & Metadata
+8. Registry Framework
+9. Lifecycle & State Machine
+10. Token Operations & Events
+11. Cryptography & Security
+12. APIs, SDKs & Schemas
+13. Network Profiles
+14. Interoperability
+15. Industry Profiles
+16. Governance
+17. Conformance
+18. Certification
+19. Implementation Guidance
+20. Appendices & Revision History
 
 ---
 
-# SDK Framework
+# Official SDK Ecosystem
 
-PTS-001 defines an official SDK architecture as part of the standard.
+PTS-001 includes an official SDK framework that standardizes developer interfaces across supported languages and platforms. The SDK architecture covers core clients, wallets, transactions, registries, identity, middleware, plugins, and enterprise services.
 
-The SDK framework includes:
+### Official Packages
 
-* Core Client
-* Wallet APIs
-* Asset APIs
-* Registry APIs
-* Identity APIs
-* Transaction APIs
-* Payments
-* Treasury
-* Marketplace
-* Governance
-* Events
-* Cryptography
-* Middleware
-* Plugin Framework
-* Authentication
-* Configuration
-
-Reference SDKs may be provided for:
-
-* TypeScript
-* JavaScript
-* Python
-* Go
-* Rust
-* Java
-* Kotlin
-* Swift
-* Dart
-* C#
-
-The SDK architecture is aligned with the PowerChain SDK ecosystem and is specified as a normative component of PTS-001.
+```text
+@powerchain/web3.js
+@powerchain/sdk
+@powerchain/react
+@powerchain/react-ui
+@powerchain/vue
+@powerchain/angular
+@powerchain/node
+@powerchain/python
+@powerchain/go
+@powerchain/rust
+@powerchain/flutter
+@powerchain/cli
+@powerchain/testing
+@powerchain/codegen
+```
 
 ---
 
-# Supported Network Profiles
-
-The specification defines implementation guidance for:
+# Supported Networks
 
 * PowerChain Native
 * Solana Token-2022
 * Sui Move
 * Layer-2 Networks
-* Cross-Chain Interoperability
-
-Additional profiles may be standardized in future releases.
+* Cross-Chain Bridges
 
 ---
 
-# Related Repository Components
+# Developer Resources
 
-| Directory                   | Description                      |
-| --------------------------- | -------------------------------- |
-| `/docs`                     | User and developer documentation |
-| `/sdk`                      | Official SDK implementations     |
-| `/openapi`                  | REST API definitions             |
-| `/protobuf`                 | Protocol Buffer definitions      |
-| `/schemas`                  | JSON Schema definitions          |
-| `/registries`               | Registry specifications          |
-| `/examples`                 | Sample implementations           |
-| `/reference-implementation` | Reference implementations        |
-| `/test-vectors`             | Conformance test vectors         |
-| `/certification`            | Certification framework          |
+The repository includes:
 
----
-
-# Document Types
-
-PTS-001 documentation uses three document classifications:
-
-| Type            | Description                                                         |
-| --------------- | ------------------------------------------------------------------- |
-| **Normative**   | Mandatory requirements using RFC 2119 language (MUST, SHOULD, MAY). |
-| **Informative** | Explanatory guidance, examples, and best practices.                 |
-| **Reference**   | Supporting material such as APIs, schemas, mappings, and examples.  |
+* Normative specifications
+* OpenAPI 3.x definitions
+* Protocol Buffer definitions
+* JSON Schemas
+* Official SDKs
+* Reference implementations
+* Example applications
+* Test vectors
+* Certification resources
+* Build and release scripts
 
 ---
 
-# Conformance
+# Documentation
 
-An implementation is considered PTS-001 compliant only if it:
-
-* Implements all mandatory requirements.
-* Produces interoperable assets.
-* Passes the official conformance tests.
-* Meets the required security controls.
-* Correctly implements supported protocol profiles.
-
-Certification requirements are defined within the specification.
+| Directory                   | Purpose                               |
+| --------------------------- | ------------------------------------- |
+| `docs/`                     | User and developer documentation      |
+| `specification/`            | Normative specification               |
+| `sdk/`                      | SDK documentation and implementations |
+| `openapi/`                  | REST API specifications               |
+| `protobuf/`                 | Protocol Buffer definitions           |
+| `schemas/`                  | JSON Schemas                          |
+| `examples/`                 | Sample applications                   |
+| `reference-implementation/` | Reference implementations             |
+| `test-vectors/`             | Conformance test suites               |
+| `certification/`            | Certification framework               |
 
 ---
 
-# Versioning Policy
+# Development Status
 
-PTS-001 follows Semantic Versioning.
+| Component                 | Status      |
+| ------------------------- | ----------- |
+| Core Specification        | Alpha       |
+| Documentation             | Alpha       |
+| SDK Framework             | Alpha       |
+| OpenAPI                   | In Progress |
+| Protocol Buffers          | In Progress |
+| JSON Schemas              | In Progress |
+| Reference Implementations | Planned     |
+| Certification Framework   | Planned     |
+
+---
+
+# Getting Started
+
+1. Read `docs/README.md`.
+2. Review `specification/PTS-001-alpha.md`.
+3. Explore the SDK documentation.
+4. Browse the example applications.
+5. Validate assets using the published schemas.
+6. Execute the build and validation scripts.
+
+---
+
+# Contributing
+
+We welcome contributions from developers, researchers, enterprises, and standards participants.
+
+Before contributing, please review:
+
+* `CONTRIBUTING.md`
+* `SECURITY.md`
+* `docs/developers/INSTRUCTIONS.md`
+
+---
+
+# Versioning
+
+PTS-001 follows **Semantic Versioning**.
 
 | Version      | Status  |
 | ------------ | ------- |
@@ -245,58 +234,47 @@ PTS-001 follows Semantic Versioning.
 | 1.0.0 Beta   | Planned |
 | 1.0.0 Stable | Planned |
 
-Major versions may introduce incompatible protocol changes.
-
 ---
 
-# Experimental Status
+# Disclaimer
 
-PTS-001 Version 1.0.0 Alpha is an experimental specification.
+PTS-001 Version **1.0.0 Alpha** is an experimental specification intended for research, interoperability testing, and community review.
 
-Current limitations include:
+* Not independently audited
+* Not production certified
+* APIs, SDKs, and schemas may change before Beta
+* Breaking changes may occur during the Alpha phase
 
-* APIs remain under active development.
-* SDKs are evolving.
-* Additional protocol profiles are planned.
-* Certification requirements are preliminary.
-* Reference implementations are incomplete.
-
-Breaking changes may occur before the Beta release.
-
----
-
-# Contributing
-
-Community participation is encouraged.
-
-Before contributing, review:
-
-* `../CONTRIBUTING.md`
-* `../SECURITY.md`
-* `../docs/developers/INSTRUCTIONS.md`
+See `DISCLAIMER.md` for the complete disclaimer.
 
 ---
 
 # License
 
-The PTS-001 specification is distributed under the repository license.
+This project is released under the **MIT License**.
 
-See the root `LICENSE` file for complete licensing information.
-
----
-
-# Disclaimer
-
-This specification is provided for research, interoperability testing, and evaluation.
-
-It has not been independently audited or certified for production use. Users are responsible for validating implementations in their own environments.
-
-See `../DISCLAIMER.md` for the full disclaimer.
+See the `LICENSE` file for the full license text.
 
 ---
 
-**PowerChain Standards Organization (PSO)**
+# Roadmap
+
+Planned milestones include:
+
+* Complete the normative specification
+* Finalize network profiles
+* Publish OpenAPI and Protocol Buffer definitions
+* Release official SDKs
+* Publish reference implementations
+* Expand conformance testing
+* Launch certification program
+* Release **PTS-001 Version 1.0.0 Beta**
+* Publish **PTS-001 Version 1.0.0 Stable**
+
+---
+
+## PowerChain Standards Organization (PSO)
 
 **PowerChain Programmable Asset Token Standard (PTS-001)**
 
-**Specification Version 1.0.0 Alpha — Experimental Alpha Release**
+*Version 1.0.0 Alpha — Experimental Alpha Release*
