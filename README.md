@@ -1,7 +1,9 @@
-# PowerChain Programmable Asset Token Standard (PTS-001)
+# PowerChain Programmable Asset Token Standard (PTS-001-ALPHA)
+
+## README.md
 
 **Version:** 1.0.0 Alpha
-**Status:** Official Production Release
+**Status:** Official Alpha Release
 **Document Class:** Normative Standard Documentation
 **Organization:** PowerChain Standards Organization (PSO)
 **Protocol Suite:** PPS-001 PowerChain Protocol Suite
@@ -10,9 +12,9 @@
 
 # Introduction
 
-The **PowerChain Programmable Asset Token Standard (PTS-001)** is an open technical standard defining how programmable digital assets are created, represented, transferred, verified, and interoperated across blockchain networks and physical infrastructure systems.
+The **PowerChain Programmable Asset Token Standard (PTS-001-ALPHA)** is an open technical standard defining how programmable digital assets are created, represented, transferred, verified, and interoperated across blockchain networks, Layer-2 systems, and physical infrastructure environments.
 
-PTS-001 establishes a common asset layer connecting:
+PTS-001-ALPHA establishes a common programmable asset layer connecting:
 
 * Blockchain networks
 * Renewable energy systems
@@ -23,7 +25,7 @@ PTS-001 establishes a common asset layer connecting:
 * Hardware identity systems
 * Cross-chain settlement networks
 
-The standard enables independent implementations while maintaining deterministic interoperability.
+The standard enables independent implementations while maintaining deterministic interoperability, security, and long-term compatibility.
 
 ---
 
@@ -31,7 +33,7 @@ The standard enables independent implementations while maintaining deterministic
 
 ```text
 Standard:
-PTS-001
+PTS-001-ALPHA
 
 Title:
 PowerChain Programmable Asset Token Standard
@@ -40,22 +42,29 @@ Version:
 1.0.0 Alpha
 
 Release:
-Official Production Release
+Official Alpha Release
 
 Status:
-Stable
+Stable Alpha
 
 Maturity:
-Production Standard
+Alpha Production Candidate
 ```
 
 ---
 
 # Supported Network Profiles
 
-PTS-001 provides standardized compatibility profiles for:
+PTS-001-ALPHA provides standardized compatibility profiles for:
 
-## PowerChain Native Layer-1
+* PowerChain Native Layer-1
+* Solana Token-2022
+* Sui Move
+* Layer-2 Settlement Networks
+
+---
+
+# PowerChain Native Layer-1 Profile
 
 Native implementation of the programmable asset model.
 
@@ -66,15 +75,16 @@ Capabilities:
 * registry integration
 * validator support
 * native settlement
+* protocol-level verification
 
 ---
 
-## Solana Token-2022
+# Solana Token-2022 Profile
 
 Profile:
 
 ```text
-PTS-SOL-001
+PTS-SOL-001-ALPHA
 ```
 
 Provides compatibility with Solana Token-2022 architecture.
@@ -86,6 +96,7 @@ Capabilities:
 * ownership synchronization
 * event compatibility
 * registry integration
+* asset state verification
 
 Architecture:
 
@@ -94,11 +105,11 @@ PTS Asset
 
     |
 
-Solana Adapter
+PTS Solana Adapter
 
     |
 
-Token-2022 Program
+Solana Token-2022 Program
 
     |
 
@@ -107,15 +118,15 @@ Solana Runtime
 
 ---
 
-## Sui Move
+# Sui Move Profile
 
 Profile:
 
 ```text
-PTS-SUI-001
+PTS-SUI-001-ALPHA
 ```
 
-Provides object-based programmable assets.
+Provides object-based programmable asset implementation.
 
 Capabilities:
 
@@ -124,6 +135,7 @@ Capabilities:
 * module security
 * programmable logic
 * event emission
+* object lifecycle management
 
 Architecture:
 
@@ -141,12 +153,12 @@ Sui Runtime
 
 ---
 
-## Layer-2 Networks
+# Layer-2 Interoperability Profile
 
 Profile:
 
 ```text
-PXS-L2-001
+PXS-L2-001-ALPHA
 ```
 
 Defines interoperability requirements for Layer-2 systems.
@@ -157,6 +169,7 @@ Capabilities:
 * proof verification
 * asset synchronization
 * settlement confirmation
+* bridge security validation
 
 ---
 
@@ -164,10 +177,10 @@ Capabilities:
 
 ## Programmable Asset
 
-A PTS-001 asset consists of:
+A PTS-001-ALPHA asset consists of:
 
 ```text
-Identity
+Asset Identity
 
 +
 
@@ -175,7 +188,7 @@ Metadata
 
 +
 
-Ownership
+Ownership State
 
 +
 
@@ -223,13 +236,13 @@ RETIRED
 # Repository Structure
 
 ```text
-PTS-001/
+PTS-001-ALPHA/
 
 ├── README.md
 
 ├── specification/
 
-│   └── PTS-001.md
+│   └── PTS-001-alpha.md
 
 ├── protobuf/
 
@@ -292,7 +305,7 @@ PTS-001/
 
 # Protocol Components
 
-## PTS Core
+## PTS Core Alpha
 
 Defines:
 
@@ -317,7 +330,7 @@ The PowerChain Data Registry provides authoritative identifiers for:
 
 ---
 
-## PXS Interoperability
+## PXS Interoperability Layer
 
 Provides:
 
@@ -353,7 +366,7 @@ Supports:
 
 # Technical Artifacts
 
-PTS-001 publishes machine-readable artifacts:
+PTS-001-ALPHA publishes machine-readable artifacts:
 
 ```text
 /specification
@@ -380,8 +393,8 @@ PTS-001 publishes machine-readable artifacts:
 ```json
 {
   "asset_id": "PTS-ASSET-001",
-  "standard": "PTS-001",
-  "version": "1.0.0-apha",
+  "standard": "PTS-001-ALPHA",
+  "version": "1.0.0-alpha",
   "issuer": "example-issuer",
   "network": "powerchain",
   "status": "ACTIVE"
@@ -454,9 +467,9 @@ Supported languages:
 ## Clone Repository
 
 ```bash
-git clone https://github.com/powerchain-network/pts-001.git
+git clone https://github.com/powerchain-network/pts-001-alpha.git
 
-cd pts-001
+cd pts-001-alpha
 ```
 
 ---
@@ -487,13 +500,13 @@ make test
 
 # Conformance
 
-A compliant implementation MUST:
+A compliant PTS-001-ALPHA implementation MUST:
 
-* implement the PTS-001 asset lifecycle
+* implement the PTS-001-ALPHA asset lifecycle
 * support canonical metadata
 * follow registry requirements
 * support required interfaces
-* pass official conformance tests
+* pass official Alpha conformance tests
 
 ---
 
@@ -512,7 +525,7 @@ Certification levels:
 
 # Security Requirements
 
-PTS-001 requires:
+PTS-001-ALPHA requires:
 
 * secure identity management
 * cryptographic verification
@@ -525,7 +538,7 @@ PTS-001 requires:
 
 # Governance
 
-PTS-001 is maintained under the PowerChain Standards Organization.
+PTS-001-ALPHA is maintained under the PowerChain Standards Organization.
 
 Change process:
 
@@ -563,8 +576,11 @@ Examples:
 
 ```text
 1.0.0 Alpha
+
 1.0.0
+
 1.1.0
+
 2.0.0
 ```
 
@@ -593,16 +609,16 @@ All contributions follow the PowerChain Standards Framework.
 
 # License
 
-The PTS-001 specification is designed for open implementation and interoperability.
+The PTS-001-ALPHA specification is designed for open implementation and interoperability.
 
 Software, hardware, and commercial deployments may use separate licensing models.
 
 ---
 
-# Official Release Package
+# Official Alpha Release Package
 
 ```text
-PTS-001-v1.0.0/
+PTS-001-ALPHA-v1.0.0/
 
 ├── specification
 
@@ -629,7 +645,7 @@ PTS-001-v1.0.0/
 
 ```text
 Standard:
-PTS-001
+PTS-001-ALPHA
 
 Name:
 PowerChain Programmable Asset Token Standard
@@ -638,10 +654,10 @@ Version:
 1.0.0 Alpha
 
 Status:
-OFFICIAL PRODUCTION RELEASE
+OFFICIAL ALPHA RELEASE
 
 Maturity:
-STABLE STANDARD
+STABLE ALPHA STANDARD
 
 Supported Networks:
 
@@ -653,5 +669,5 @@ Supported Networks:
 
 ---
 
-**PowerChain Programmable Asset Token Standard (PTS-001)**
-**Version 1.0.0 — Alpha**
+**PowerChain Programmable Asset Token Standard (PTS-001-ALPHA)**
+**Version 1.0.0 Alpha**
