@@ -1,7 +1,5 @@
 # PowerChain Programmable Asset Token Standard (PTS-001-ALPHA)
 
-## README.md
-
 **Version:** 1.0.0 Alpha
 **Status:** Official Alpha Release
 **Document Class:** Normative Standard Documentation
