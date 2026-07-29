@@ -8,39 +8,50 @@
 
 ## Overview
 
-The **PowerChain Programmable Asset Token Standard (PTS-001)** is an open specification for creating, managing, transferring, and verifying programmable digital assets across multiple blockchain networks and enterprise systems.
+The **PowerChain Programmable Asset Token Standard (PTS-001)** is an open, vendor-neutral specification for creating, managing, transferring, and verifying programmable digital assets across blockchain networks and enterprise systems.
 
-PTS-001 provides a common asset model designed for interoperability, portability, and extensibility while supporting industry-specific profiles such as energy certificates, hardware identity, digital credentials, and tokenized real-world assets.
+PTS-001 defines a common asset model, lifecycle, metadata framework, interoperability profiles, and conformance requirements to enable portable and interoperable programmable assets.
 
-**Current release status:** Experimental Alpha. This project is under active development and is intended for research, evaluation, and community feedback.
-
----
-
-## Objectives
-
-* Standardize programmable digital assets.
-* Enable cross-network interoperability.
-* Define a common asset lifecycle.
-* Support extensible metadata and registries.
-* Provide open APIs, schemas, and Protocol Buffers.
-* Supply reference implementations and SDKs.
-* Establish conformance and certification requirements.
+> **Notice:** This is an **experimental Alpha release** intended for research, development, interoperability testing, and community feedback. It is **not** production certified.
 
 ---
 
-## Supported Profiles
+## Key Features
 
-* **PowerChain Native**
-* **Solana Token-2022**
-* **Sui Move**
-* **Layer-2 Networks**
-* **Energy Certificates**
-* **Hardware Identity**
-* **Enterprise Integration**
+* Open programmable asset model
+* Cross-network interoperability
+* Standardized metadata and registries
+* Extensible profile framework
+* REST API and OpenAPI support
+* Protocol Buffer definitions
+* JSON Schema validation
+* Reference implementations
+* SDK support
+* Conformance and certification framework
 
 ---
 
-## Repository Structure
+## Supported Network Profiles
+
+* PowerChain Native
+* Solana Token-2022
+* Sui Move
+* Layer-2 Networks
+* Cross-Chain Interoperability
+
+---
+
+## Industry Profiles
+
+* Energy Certificates
+* Hardware Identity
+* Enterprise Assets
+* Government Assets
+* Digital Identity (planned)
+
+---
+
+## Repository Layout
 
 ```text
 PTS-001-ALPHA/
@@ -65,102 +76,118 @@ PTS-001-ALPHA/
 ├── CONTRIBUTING.md
 ├── INSTRUCTIONS.md
 ├── CHANGELOG.md
-└── package.json
+├── package.json
+└── .gitignore
 ```
 
 ---
 
 ## Documentation
 
-| Document                         | Description                  |
-| -------------------------------- | ---------------------------- |
-| `docs/README.md`                 | Documentation index          |
-| `docs/GETTING_STARTED.md`        | Installation and setup       |
-| `docs/QUICKSTART.md`             | First implementation         |
-| `docs/FAQ.md`                    | Frequently asked questions   |
-| `specification/PTS-001-alpha.md` | Core technical specification |
+| Path                             | Description            |
+| -------------------------------- | ---------------------- |
+| `docs/README.md`                 | Documentation index    |
+| `docs/GETTING_STARTED.md`        | Installation and setup |
+| `docs/ARCHITECTURE.md`           | System architecture    |
+| `docs/PROTOCOL_OVERVIEW.md`      | Protocol overview      |
+| `specification/PTS-001-alpha.md` | Core specification     |
 
 ---
 
-## Developer Resources
+## Project Structure
 
-* OpenAPI definitions
-* Protocol Buffer schemas
-* JSON Schemas
-* Reference implementations
-* SDK examples
-* Test vectors
-* Validation tools
+* **`docs/`** – User and developer documentation
+* **`specification/`** – Normative specification documents
+* **`scripts/`** – Build, validation, packaging, and release scripts
+* **`sdk/`** – Language-specific SDKs
+* **`protobuf/`** – Protocol Buffer definitions
+* **`openapi/`** – OpenAPI specifications
+* **`schemas/`** – JSON Schemas and validation rules
+* **`registries/`** – Registry definitions
+* **`reference-implementation/`** – Example implementations
+* **`test-vectors/`** – Conformance test data
+* **`certification/`** – Certification framework
+* **`examples/`** – Sample assets and API requests
 
 ---
 
 ## Development Status
 
-| Component        | Status      |
-| ---------------- | ----------- |
-| Specification    | Alpha       |
-| Documentation    | Alpha       |
-| Schemas          | In Progress |
-| OpenAPI          | In Progress |
-| Protocol Buffers | In Progress |
-| SDKs             | Planned     |
-| Certification    | Planned     |
+| Component                | Status      |
+| ------------------------ | ----------- |
+| Specification            | Alpha       |
+| Documentation            | Alpha       |
+| Network Profiles         | Alpha       |
+| OpenAPI                  | In Progress |
+| Protocol Buffers         | In Progress |
+| JSON Schemas             | In Progress |
+| SDKs                     | Planned     |
+| Reference Implementation | Planned     |
+| Certification Framework  | Planned     |
 
 ---
 
-## Disclaimer
+## Getting Started
 
-PTS-001-ALPHA is an experimental project.
-
-* Not independently audited.
-* Not production certified.
-* Not an officially adopted industry standard.
-* APIs, schemas, and specifications may change before Beta.
-
-See **`DISCLAIMER.md`** for complete details.
+1. Read `docs/GETTING_STARTED.md`.
+2. Review `specification/PTS-001-alpha.md`.
+3. Explore the example assets in `examples/`.
+4. Validate data using the schemas in `schemas/`.
+5. Build and test using the scripts in `scripts/`.
 
 ---
 
 ## Contributing
 
-Community contributions are welcome.
+Contributions are welcome.
 
-Please read:
+Before opening issues or pull requests, please read:
 
 * `CONTRIBUTING.md`
 * `SECURITY.md`
 * `docs/developer/CONTRIBUTING.md`
 
-before submitting issues or pull requests.
-
 ---
 
 ## Versioning
 
-This project follows semantic versioning.
+PTS-001 follows Semantic Versioning.
 
-| Version     | Status                |
-| ----------- | --------------------- |
-| 1.0.0 Alpha | Current               |
-| 1.0.0 Beta  | Planned               |
-| 1.0.0       | Future Stable Release |
+| Version     | Status                 |
+| ----------- | ---------------------- |
+| 1.0.0 Alpha | Current                |
+| 1.0.0 Beta  | Planned                |
+| 1.0.0       | Planned Stable Release |
+
+---
+
+## Disclaimer
+
+PTS-001-ALPHA is an experimental specification.
+
+* Not independently audited.
+* Not production certified.
+* APIs and schemas may change.
+* Network profiles may evolve before Beta.
+
+See `DISCLAIMER.md` for the complete disclaimer.
 
 ---
 
 ## License
 
-This repository is released under the **MIT License** unless otherwise specified.
+Released under the **MIT License** unless otherwise specified.
 
-See the `LICENSE` file for details.
+See `LICENSE` for details.
 
 ---
 
 ## Roadmap
 
-Planned milestones include:
+Upcoming milestones include:
 
-* Complete protocol specification
-* Finalize interoperability profiles
+* Complete the core specification
+* Finalize network profiles
 * Publish reference implementations
 * Release SDKs
 * Expand conformance testing
@@ -169,18 +196,15 @@ Planned milestones include:
 
 ---
 
-## Acknowledgements
+## Contact
 
-The PowerChain Programmable Asset Token Standard is developed as an open specification intended to encourage collaboration, interoperability, and innovation across blockchain and distributed systems.
+Community discussions, issue reports, and enhancement proposals are welcome through the project's repository and governance process.
 
 ---
 
 **PowerChain Standards Organization (PSO)**
-**PTS-001-ALPHA**
-**Version 1.0.0 Alpha – Experimental Alpha Release**
 
+**PowerChain Programmable Asset Token Standard (PTS-001)**
 
----
+**Version 1.0.0 Alpha — Experimental Alpha Release**
 
-**PowerChain Programmable Asset Token Standard (PTS-001-ALPHA)**
-**Version 1.0.0 Alpha**
